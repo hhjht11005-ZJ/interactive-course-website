@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系統平臺探險記 - 國中資訊科技互動課程</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 主要容器 -->
+    <div class="app-container">
+        <!-- 首頁 -->
+        <div id="home-page" class="page active">
+            <div class="hero-section">
+                <div class="hero-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h1 class="hero-title">系統平臺探險記</h1>
+                <p class="hero-subtitle">
+                    歡迎來到神奇的資訊科技世界！讓我們一起探索電腦系統平臺的奧秘，
+                    透過有趣的互動活動，成為真正的科技達人！
+                </p>
+                
+                <!-- 進度條 -->
+                <div class="progress-section">
+                    <div class="progress-label">學習進度</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="overall-progress"></div>
+                    </div>
+                    <div class="progress-text">已完成 <span id="completed-count">0</span> / 5 個章節</div>
+                </div>
+            </div>
+
+            <!-- 章節卡片 -->
+            <div class="chapters-grid">
+                <!-- 章節 1 -->
+                <div class="chapter-card" data-chapter="1">
+                    <div class="chapter-icon blue-gradient">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="chapter-content">
+                        <h3 class="chapter-title">系統平臺的「科技夥伴」</h3>
+                        <p class="chapter-subtitle">概念初探</p>
+                        <p class="chapter-description">從日常使用的科技設備開始，探索系統平臺的奧秘！</p>
+                        
+                        <div class="activities-preview">
+                            <h4>互動活動</h4>
+                            <div class="activity-tags">
+                                <span class="activity-tag">我的科技夥伴</span>
+                                <span class="activity-tag">平臺大富翁</span>
+                            </div>
+                        </div>
+                        
+                        <button class="start-button" onclick="openChapter(1)">
+                            <i class="fas fa-play"></i>
+                            開始學習
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 章節 2 -->
+                <div class="chapter-card" data-chapter="2">
+                    <div class="chapter-icon green-gradient">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="chapter-content">
+                        <h3 class="chapter-title">揭秘「科技大腦」與「記憶寶庫」</h3>
+                        <p class="chapter-subtitle">系統平臺的內部世界</p>
+                        <p class="chapter-description">深入電腦內部，認識CPU、記憶體和作業系統的運作！</p>
+                        
+                        <div class="activities-preview">
+                            <h4>互動活動</h4>
+                            <div class="activity-tags">
+                                <span class="activity-tag">電腦解剖課</span>
+                                <span class="activity-tag">記憶體大作戰</span>
+                                <span class="activity-tag">作業系統的超級任務</span>
+                            </div>
+                        </div>
+                        
+                        <button class="start-button" onclick="openChapter(2)">
+                            <i class="fas fa-play"></i>
+                            開始學習
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 章節 3 -->
+                <div class="chapter-card" data-chapter="3">
+                    <div class="chapter-icon yellow-gradient">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="chapter-content">
+                        <h3 class="chapter-title">穿越「科技時光隧道」</h3>
+                        <p class="chapter-subtitle">系統平臺的演進之旅</p>
+                        <p class="chapter-description">搭乘時光機，見證科技從大型電腦到智慧手機的驚人演變！</p>
+                        
+                        <div class="activities-preview">
+                            <h4>互動活動</h4>
+                            <div class="activity-tags">
+                                <span class="activity-tag">科技演進拼圖</span>
+                                <span class="activity-tag">從命令列到觸控螢幕</span>
+                                <span class="activity-tag">雲端與AI的未來想像</span>
+                            </div>
+                        </div>
+                        
+                        <button class="start-button" onclick="openChapter(3)">
+                            <i class="fas fa-play"></i>
+                            開始學習
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 章節 4 -->
+                <div class="chapter-card" data-chapter="4">
+                    <div class="chapter-icon red-gradient">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="chapter-content">
+                        <h3 class="chapter-title">探索「電腦心臟」的秘密</h3>
+                        <p class="chapter-subtitle">系統平臺的運作原理</p>
+                        <p class="chapter-description">化身電腦工廠的工人，體驗資料在電腦內部的奇妙旅程！</p>
+                        
+                        <div class="activities-preview">
+                            <h4>互動活動</h4>
+                            <div class="activity-tags">
+                                <span class="activity-tag">電腦工廠模擬</span>
+                                <span class="activity-tag">試算表任務</span>
+                            </div>
+                        </div>
+                        
+                        <button class="start-button" onclick="openChapter(4)">
+                            <i class="fas fa-play"></i>
+                            開始學習
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 章節 5 -->
+                <div class="chapter-card" data-chapter="5">
+                    <div class="chapter-icon purple-gradient">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="chapter-content">
+                        <h3 class="chapter-title">「電腦健康檢查」大師</h3>
+                        <p class="chapter-subtitle">資源管理與效能優化</p>
+                        <p class="chapter-description">成為電腦醫生，學會診斷和優化電腦效能！</p>
+                        
+                        <div class="activities-preview">
+                            <h4>互動活動</h4>
+                            <div class="activity-tags">
+                                <span class="activity-tag">我是電腦偵探</span>
+                                <span class="activity-tag">資源管理小劇場</span>
+                            </div>
+                        </div>
+                        
+                        <button class="start-button" onclick="openChapter(5)">
+                            <i class="fas fa-play"></i>
+                            開始學習
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 底部激勵區塊 -->
+            <div class="motivation-section">
+                <div class="motivation-card">
+                    <h3>🚀 準備好開始你的科技探險了嗎？</h3>
+                    <p>每個章節都充滿了有趣的互動活動和實用的知識。完成所有章節，你就能成為真正的系統平臺專家！</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 章節詳情頁面 -->
+        <div id="chapter-page" class="page">
+            <div class="chapter-header">
+                <button class="back-button" onclick="goHome()">
+                    <i class="fas fa-arrow-left"></i>
+                    返回課程列表
+                </button>
+                
+                <div class="chapter-info">
+                    <div class="chapter-icon-large" id="chapter-icon-large">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h1 id="chapter-title-large">章節標題</h1>
+                    <p id="chapter-subtitle-large">章節副標題</p>
+                </div>
+            </div>
+
+            <!-- 標籤頁導航 -->
+            <div class="tab-navigation">
+                <button class="tab-button active" data-tab="overview" onclick="switchTab('overview')">
+                    <i class="fas fa-info-circle"></i>
+                    課程概覽
+                </button>
+                <button class="tab-button" data-tab="activities" onclick="switchTab('activities')">
+                    <i class="fas fa-gamepad"></i>
+                    互動活動
+                </button>
+                <button class="tab-button" data-tab="concepts" onclick="switchTab('concepts')">
+                    <i class="fas fa-lightbulb"></i>
+                    重點概念
+                </button>
+            </div>
+
+            <!-- 標籤頁內容 -->
+            <div class="tab-content">
+                <!-- 概覽標籤 -->
+                <div id="overview-tab" class="tab-panel active">
+                    <div class="overview-content">
+                        <h2>章節介紹</h2>
+                        <p id="chapter-description-full">章節詳細描述</p>
+                        
+                        <div class="learning-objectives">
+                            <h3><i class="fas fa-target"></i> 學習目標</h3>
+                            <ul id="learning-objectives-list">
+                                <!-- 動態生成 -->
+                            </ul>
+                        </div>
+
+                        <div class="activity-overview">
+                            <h3><i class="fas fa-rocket"></i> 活動預覽</h3>
+                            <div id="activity-overview-list">
+                                <!-- 動態生成 -->
+                            </div>
+                        </div>
+
+                        <button class="start-learning-button" onclick="switchTab('activities')">
+                            <i class="fas fa-play"></i>
+                            開始學習活動
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 互動活動標籤 -->
+                <div id="activities-tab" class="tab-panel">
+                    <div id="activities-content">
+                        <!-- 動態生成活動內容 -->
+                    </div>
+                    
+                    <!-- 活動內容容器 -->
+                    <div id="activity-content" style="display: none;">
+                        <!-- 具體活動內容將在這裡顯示 -->
+                    </div>
+                </div>
+
+                <!-- 重點概念標籤 -->
+                <div id="concepts-tab" class="tab-panel">
+                    <div class="concepts-content">
+                        <h2><i class="fas fa-lightbulb"></i> 重點概念</h2>
+                        <div id="concepts-list">
+                            <!-- 動態生成 -->
+                        </div>
+                        
+                        <h2><i class="fas fa-key"></i> 關鍵要點</h2>
+                        <div id="key-points-list">
+                            <!-- 動態生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
